@@ -23,7 +23,7 @@ jobs:
             MY_VARIABLE: ${{ secrets.TEST }}
             MY_TEST_VARIABLE: ${{ secrets.TEST_VAR }}
             WHOEL: ${{ secrets }}
-    say-hello:
+    say-world:
       runs-on: ubuntu-20.04
       steps:
         - uses: actions/checkout@v2
