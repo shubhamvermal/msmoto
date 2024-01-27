@@ -1,4 +1,3 @@
-import React from 'react'
 import SomeContext from './SomeContext'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
