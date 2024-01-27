@@ -1,13 +1,13 @@
-import SomeContext from './SomeContext'
+import ThemeContext from './ThemeContext'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const UiKitProvider = ({color, children}: any) => {
     document.documentElement.style.setProperty('accent-color', color)
 
   return (
-    <SomeContext.Provider value={color}>
+    <ThemeContext.Provider value={color}>
         {children}
-    </SomeContext.Provider>
+    </ThemeContext.Provider>
   )
 }
 

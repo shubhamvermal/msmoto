@@ -1,0 +1,37 @@
+name: my-ci
+on:
+  push:
+    branches:
+      - 'master'
+  pull_request:
+    branches:
+      - 'master'
+jobs:
+    say-hello:
+      runs-on: ubuntu-20.04
+      steps:
+        - uses: actions/checkout@v2
+
+        - uses: actions/setup-node@v1
+        
+          with: 
+            node-version: '15.8.0'
+        -
+          name: Install repo dependencies
+          run: echo "$MY_VARIABLE, $MY_TEST_VARIABLE, $WHOEL"
+          env:
+            MY_VARIABLE: ${{ secrets.TEST }}
+            MY_TEST_VARIABLE: ${{ secrets.TEST_VAR }}
+            WHOEL: ${{ secrets }}
+    say-hello:
+      runs-on: ubuntu-20.04
+      steps:
+        - uses: actions/checkout@v2
+
+        - uses: actions/setup-node@v1
+        
+          with: 
+            node-version: '15.8.0'
+        -
+          name: Install repo dependencies
+          run: npm start && exit(1) && exit

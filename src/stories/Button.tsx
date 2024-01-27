@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import './button.css';
-import SomeContext from '../component/SomeContext';
+import ThemeContext from '../component/theme-context/ThemeContext';
 
 interface ButtonProps {
   /**
@@ -35,7 +35,7 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const theme = useContext(SomeContext);
+  const theme = useContext(ThemeContext);
   console.log("🚀 ~ theme:", theme)
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
