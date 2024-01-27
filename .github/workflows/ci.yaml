@@ -10,13 +10,7 @@ jobs:
     say-hello:
       runs-on: ubuntu-20.04
       steps:
-        - uses: actions/checkout@v2
-
-        - uses: actions/setup-node@v1
-        
-          with: 
-            node-version: '15.8.0'
-        -
+        - 
           name: Install repo dependencies
           run: echo "$MY_VARIABLE, $MY_TEST_VARIABLE, $WHOEL"
           env:
